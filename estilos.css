@@ -1,0 +1,589 @@
+
+:root {
+    --color-principal: #6F4E37;     
+    --color-secundario: #A0522D;    
+    --color-acento: #D82D42;        
+    --color-fondo-claro: #F5F5DC;   
+    --color-borde: #E0E0E0;        
+    --color-texto-oscuro: #3e2723;  
+    --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transicion-rapida: all 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-claro);
+}
+
+/* 2. Tipografía y Encabezados */
+h1, h2, h3, h4, h5 { /* Incluido h5 para el Capuchino y Jugo */
+    font-family: 'Georgia', serif;
+    color: var(--color-principal);
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.8em; /* Aumentado para el Hero */
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.8em; /* Ajustado */
+    border-bottom: 2px solid var(--color-acento); /* Usamos el acento para darle vida */
+    display: inline-block;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+    color: var(--color-principal);
+}
+
+/* 3. Estilos del Header y Navegación */
+header {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion-rapida);
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: var(--color-acento);
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.carrito-icono {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: color 0.2s;
+    color: white; /* Asegura que el icono sea blanco */
+}
+
+.carrito-icono:hover {
+    color: var(--color-acento);
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--color-acento);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em;
+    font-weight: bold;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* 4. Estilos de Botones */
+.boton-primario {
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Ligeramente más grande */
+    margin-top: 15px;
+    border-radius: 25px; /* Botones más redondeados */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: var(--transicion-rapida);
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.boton-primario:hover {
+    background-color: var(--color-secundario); /* Cambiamos a color tierra al hacer hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de Main y Secciones Generales */
+main {
+    padding: 20px 5%;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    /* Aquí puedes poner la imagen de fondo de tu Hero */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('imagenes/fondo.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px; /* Más padding para que destaque */
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 3.5em;
+    margin-bottom: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+/* 7. Menú y Productos */
+.menu-completo {
+    text-align: center;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.categoria-menu {
+    margin-bottom: 40px;
+}
+
+.categoria-menu h4 {
+    color: var(--color-principal);
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--color-secundario);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.categoria-menu h5 {
+    color: var(--color-principal);
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.items-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.item-producto {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: var(--transicion-rapida);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-acento);
+}
+
+.img-producto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-producto .descripcion {
+    font-size: 0.9em;
+    color: #666;
+    min-height: 40px; 
+}
+
+
+.item-producto .precio {
+    display: block;
+    font-size: 1.4em;
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* 8. Historia y Ubicación */
+.historia, .mapa {
+    text-align: left;
+}
+
+.historia p, address p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+
+#ubicacion {
+    text-align: center;
+}
+
+#ubicacion address {
+    margin-top: 20px;
+    font-style: normal;
+}
+
+/* 9. Formulario de Contacto */
+.formulario-contacto {
+    text-align: center;
+}
+
+.formulario-contacto form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-fondo-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 10. Footer */
+footer {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.redes-sociales a:hover {
+    color: var(--color-acento);
+}
+
+/* 11. Modal (Carrito) - ACTUALIZADO CON FONDO DE IMAGEN */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-contenido {
+    
+    background-image: url('imagenes/imagen\ de\ fondo\ para\ el\ pedido.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-color: #66462f; 
+    background-blend-mode: overlay; 
+    
+    margin: 8% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px; 
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: white; 
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-contenido h2 {
+    font-size: 1.8em;
+    color: rgb(153, 10, 10); 
+    margin: 0;
+    display: inline-block;
+}
+
+.cerrar-modal {
+    color: white;
+    float: right;
+    font-size: 20px;
+    font-weight: normal; 
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 30px; 
+    right: 30px;
+}
+.cerrar-modal:hover {
+    color: var(--color-acento);
+}
+
+/* Contenedor de Ítems */
+#items-carrito {
+    margin: 30px 0 20px 0;
+    padding: 0;
+}
+
+/* Estilo de cada ítem en la lista */
+.item-en-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.item-en-carrito .item-nombre {
+    color: rgb(15, 1, 1);
+}
+
+.item-en-carrito .item-precio {
+    font-weight: bold;
+    color: var(--color-acento); 
+}
+
+.carrito-vacio-mensaje {
+    text-align: center;
+    color: #ccc;
+    padding: 20px;
+}
+
+/* Línea Punteada (Separador) */
+.separador-puntos {
+    border: none;
+    border-top: 2px dashed #999; 
+    margin: 20px 0;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* El botón de pago con el color de café */
+#proceder-pago {
+    width: 100%; 
+    padding: 15px;
+    background-color: var(--color-acento); 
+}
+
+#proceder-pago:hover {
+    background-color: var(--color-secundario);
+}
+
+/* 12. Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .carrito-icono {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .items-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-contenido {
+        margin: 15% auto;
+    }
+}
+
+--carrito ver 
+
+.modal-contenido {
+    background-color:#0f0101;
+    margin: 8% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px; 
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(96, 221, 57, 0.2);
+   
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-contenido h2 {
+    font-size: 1.8em;
+    color:#e2d7d7;
+    margin: 0;
+    display: inline-block;
+}
+
+.cerrar-modal {
+    color:#e6e6e6;
+    float: right;
+    font-size: 20px;
+    font-weight:200;
+    cursor: pointer;
+    padding: 5px;
+    /* Para alinearlo al lado del título */
+    position: absolute;
+    top: 30px; 
+    right: 30px;
+}
+.cerrar-modal:hover {
+    color:#3b0d0d;
+}
+
+/* Contenedor de Ítems */
+#items-carrito {
+    margin: 30px 0 20px 0;
+    padding: 0;
+    
+}
+
+/* Estilo de cada ítem en la lista */
+.item-en-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.item-en-carrito .item-nombre {
+    color:#ffffff;
+}
+
+.item-en-carrito .item-precio {
+    font-weight: bold;
+    color:#dd4e8a;
+}
+
+
+.separador-puntos {
+    border: none;
+    border-top: 2px dashed #f1f1f1;
+    margin: 20px 0;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* El botón de pago  */
+#proceder-pago {
+    width: 100%; 
+    padding: 15px;
+    background-color:#dd4e8a;
+}
+
+#proceder-pago:hover {
+    background-color:#a87f7f;
+}

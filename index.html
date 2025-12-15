@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Aroma - Tu Café Favorito</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Dulce Aroma :)</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#pedidos-online">Pedir en Línea</a></li> 
+                <li><a href="#nosotros">Nuestra Historia</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="carrito-icono" id="abrir-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="contador-carrito">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero" 
+        style="
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('imagenes/imagen.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+        ">
+        <section id="inicio" class="hero">
+            <h2>El Placer de un Buen Café</h2>
+            <p>Descubre el sabor y el ambiente que hacen de "Dulce Aroma" tu lugar perfecto para desconectar.</p>
+            <a href="#pedidos-online" class="boton-primario">Explorar Menú y Pedir</a>
+        </section>
+
+        <section id="pedidos-online" class="menu-completo">
+            <h3>Nuestro Menú Digital</h3>
+            <p class="subtitulo">Selecciona tus favoritos y haz tu pedido para recoger o para disfrutar en el local.</p>
+
+            <div class="categoria-menu:)">
+                <h4>Bebidas Calientes y Jugos:)</h4>
+                <div class="items-menu-grid">
+                    <article class="item-producto" data-id="1" data-nombre="Espresso Clásico" data-precio="2.50">
+                        <img src="imagenes/cafe expreso clasico.jpeg" alt="Espresso" class="img-producto">
+                        <h4>Espresso Clásico</h4>
+                        <p class="descripcion">El corazón de nuestro café. Intenso y aromático.</p>
+                        <span class="precio">s/2.50</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="item-producto" data-id="2" data-nombre="Capuchino" data-precio="10.00">
+                        <img src="imagenes/capuchino.jpg" alt="Latte" class="img-producto">
+                        <h5>Capuchino</h5>
+                        <p class="descripcion">Cremoso y dulce, con toque de Chocolate.</p>
+                        <span class="precio">s/10.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="item-producto" data-id="3" data-nombre="Jugo de Fresa Cremoso" data-precio="7.50">
+                        <img src="imagenes/jugo de fresa.jpg" alt="Jugo de fresa" class="img-producto">
+                        <h5>Jugo de Fresa Cremoso</h5>
+                        <p class="descripcion">Fresa dulce con textura suave y láctea.</p>
+                        <span class="precio">s/7.50</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="categoria-menu :)">
+                <h4>Repostería y Snacks:)</h4>
+                <div class="items-menu-grid">
+                    <article class="item-producto" data-id="4" data-nombre="Torta de Chocolate" data-precio="6.00">
+                        <img src="imagenes/torta de chocolate.jpg" alt="Tarta" class="img-producto">
+                        <h4>Torta de Chocolate</h4>
+                        <p class="descripcion">Cacao intenso en un postre húmedo y rico.</p>
+                        <span class="precio">s/6.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="item-producto" data-id="5" data-nombre="Tres Leche" data-precio="7.00">
+                        <img src="imagenes/tres leche.jpg" alt="Croissant" class="img-producto">
+                        <h4>Tres Leche</h4>
+                        <p class="descripcion">Súper húmedo y dulce. Bizcocho bañado en tres tipos de leche.</p>
+                        <span class="precio">s/7.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="categoria-menu  :)">
+                <h4>Comida :)</h4>
+                <div class="items-menu-grid">
+                    <article class="item-producto" data-id="4" data-nombre="salchipapa" data-precio="10.00">
+                        <img src="imagenes/salchipapa.jpg" alt="Tarta" class="img-producto">
+                        <h4>salchipapa</h4>
+                        <p class="descripcion">papas fritas doradas, servidas con rodajas de salchicha (hot dog), típicamente acompañadas de salsas.</p>
+                        <span class="precio">s/10.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="item-producto" data-id="5" data-nombre="Pollo broastrer" data-precio="12.00">
+                        <img src="imagenes/pollo broster.jpg" alt="Croissant" class="img-producto">
+                        <h4>Pollo broastrer</h4>
+                        <p class="descripcion">Pollo troceado, frito hasta quedar crujiente por fuera y jugoso por dentro, con un marinado especial.</p>
+                        <span class="precio">s/12.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="item-producto" data-id="5" data-nombre="Alitas Picantes" data-precio="15.00">
+                        <img src="imagenes/alitas picantes.jpg" alt="Croissant" class="img-producto">
+                        <h4>Alitas Picantes</h4>
+                        <p class="descripcion">Alitas de pollo crujientes, bañadas en una salsa especiada y ardiente. Perfectas para amantes del picante.</p>
+                        <span class="precio">s/15.00</span>
+                        <button class="boton-primario agregar-carrito">Añadir al Carrito</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="historia">
+            <h3>Nuestra Historia</h3>
+            <p>"Dulce Aroma"inició sus operaciones en 2018 con el objetivo de convertirse en un establecimiento gastronómico de servicio completo. Desde su fundación, se ha enfocado en ofrecer cafés de especialidad y una experiencia culinaria de alta calidad. La cafetería pronto complementó su oferta de bebidas con jugos naturales y una selección artesanal de tortas. Gracias a su carta de comidas ligeras, Dulce Aroma se ha consolidado como un espacio versátil y de gran acogida.</p>
+        </section>
+
+        
+            <h3>Encuéntranos</h3>
+            <p>Estamos serca al teatro frente ala reniec. ¡Te esperamos!</p>
+    
+            <address>
+                <p>Dirección: Calle teatro</p>
+                <p>Teléfono: 123456789</p>
+            </address>
+        </section>
+
+        <section id="contacto" class="formulario-contacto">
+    <h3>Contáctanos y Registrate ¡Aquii !</h3>
+    <form action="https://form.jotform.com/253475660108054" method="POST">
+        
+
+        <button type="submit" class="boton-primario">As click Aqui </button>
+    </form>
+</section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dulce Aroma. Deysi - Yoselin.</p>
+        <div class="redes-sociales">
+            <a href="#" target="_blank">Instagram</a> | 
+            <a href="#" target="_blank">Facebook</a>
+        </div>
+    </footer>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+            <h2>Tu Pedido</h2>
+            <div id="items-carrito">
+                <p class="carrito-vacio-mensaje">El carrito está vacío.</p>
+            </div>
+            <div class="total-carrito">
+                <strong>Total:</strong> <span id="total-monto">$0.00</span>
+            </div>
+            <button class="boton-primario" id="proceder-pago">Proceder al Pago</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
